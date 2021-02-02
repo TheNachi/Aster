@@ -8,21 +8,26 @@
 import UIKit
 
 class ProductsViewModel {
-    var apiService: ApiService
+    var apiService: ApiService?
     var products: [ProductModel] = []
     weak var delegate: ProductsViewDelegate?
     
-    init(with apiService: ApiService) {
+    init(with apiService: ApiService?) {
         self.apiService = apiService
-        self.apiService.delegate = self
+        self.apiService?.delegate = self
     }
 
     public func getProducts(with count: String, noOfPages: String) {
+        guard let apiService = self.apiService else { return }
         apiService.getProduct(with: count, noOfPages: noOfPages)
     }
     
     public func getProductsCount() -> Int {
         return self.products.count
+    }
+    
+    public func updateProduct(response: [ProductModel]) {
+        products.append(contentsOf: response)
     }
     
     public func getImageHeightFor(width: CGFloat, at index: Int) -> CGFloat {
@@ -45,7 +50,7 @@ class ProductsViewModel {
 
 extension ProductsViewModel: ProductDelegate {
     func onGetProduct(response: [ProductModel]) {
-        products.append(contentsOf: response)
+        self.updateProduct(response: response)
         self.delegate?.productLoaded()
     }
     

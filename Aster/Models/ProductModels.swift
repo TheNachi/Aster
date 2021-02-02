@@ -21,6 +21,7 @@ struct ImageModel: Decodable {
     let url: String
     
     var aspectRatio: CGFloat {
-        return CGFloat(width) / CGFloat(height)
+        return CGFloat(width) / CGFloat(height
+        )
     }
 }

@@ -81,15 +81,14 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         }
         return cell
     }
-
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let vModel = self.viewModel else { return }
-//        let productDetailsVC = DetailsViewController(),
-//            detailsVM = DetailsViewModel(with: vModel.getSingleProduct(index: indexPath.row))
-//        productDetailsVC.detailsViewModel = detailsVM
-//        self.navigationController?.pushViewController(productDetailsVC, animated: true)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vModel = self.viewModel else { return }
+        let productDetailsVC = ProductDetailsViewController(),
+            detailsVM = ProductDetailsViewModel(with: vModel.getSingleProduct(index: indexPath.row))
+        productDetailsVC.detailsViewModel = detailsVM
+        self.navigationController?.pushViewController(productDetailsVC, animated: true)
+    }
 
 }
 

@@ -32,18 +32,18 @@ class ProductsCVLayout: UICollectionViewLayout {
     override public func prepare() {
         guard let collectionView = collectionView else { return }
 
-        let numberOfColumns = Int(contentWidth / cellWidth) // #3
+        let numberOfColumns = Int(contentWidth / cellWidth)
         let totalSpaceWidth = contentWidth - CGFloat(numberOfColumns) * cellWidth
         let horizontalPadding = totalSpaceWidth / CGFloat(numberOfColumns + 1)
         let numberOfItems = collectionView.numberOfItems(inSection: 0)
 
-        if (contentWidth != cachedWidth || self.numberOfItems != numberOfItems) { // #1
+        if (contentWidth != cachedWidth || self.numberOfItems != numberOfItems) {
             cache = []
             contentHeight = 0
             self.numberOfItems = numberOfItems
         }
 
-        if cache.isEmpty { // #2
+        if cache.isEmpty {
             cachedWidth = contentWidth
             var xOffset = [CGFloat]()
             for column in 0 ..< numberOfColumns {
@@ -61,9 +61,9 @@ class ProductsCVLayout: UICollectionViewLayout {
                 let frame = CGRect(x: xOffset[column], y: yOffset[column], width: cellWidth, height: height)
                 let insetFrame = frame.insetBy(dx: 0, dy: cellPadding)
 
-                let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath as IndexPath) // #4
-                attributes.frame = insetFrame // #5
-                cache.append(attributes) // #6
+                let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath as IndexPath)
+                attributes.frame = insetFrame
+                cache.append(attributes)
                 contentHeight = max(contentHeight, frame.maxY)
                 yOffset[column] = yOffset[column] + height
 
@@ -79,9 +79,9 @@ class ProductsCVLayout: UICollectionViewLayout {
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
 
-        for attributes in cache { // #7
-            if attributes.frame.intersects(rect) { // #8
-                layoutAttributes.append(attributes) // #9
+        for attributes in cache {
+            if attributes.frame.intersects(rect) {
+                layoutAttributes.append(attributes)
             }
         }
         return layoutAttributes

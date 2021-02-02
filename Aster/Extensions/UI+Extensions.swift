@@ -40,27 +40,6 @@ extension UIColor {
     }
 }
 
-
-extension UICollectionView {
-    
-    func addPullToRefresh(action: Selector) {
-        let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor.indicatorTint
-        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing...")
-        refreshControl.addTarget(self,
-                                 action: action, for: UIControl.Event.valueChanged)
-        self.refreshControl = refreshControl
-        self.addSubview(refreshControl)
-    }
-    
-    func stopRefresh() {
-        guard let refreshControl = self.refreshControl else { return }
-        refreshControl.endRefreshing()
-    }
-    
-    
-}
-
 extension NSAttributedString {
     func height(containerWidth: CGFloat) -> CGFloat {
         let rect = self.boundingRect(
