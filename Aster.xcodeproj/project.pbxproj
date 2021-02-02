@@ -10,7 +10,6 @@
 		B6EA5AE925C996A200EFC5BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA5AE825C996A200EFC5BA /* AppDelegate.swift */; };
 		B6EA5AEB25C996A200EFC5BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA5AEA25C996A200EFC5BA /* SceneDelegate.swift */; };
 		B6EA5AED25C996A200EFC5BA /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA5AEC25C996A200EFC5BA /* ProductsViewController.swift */; };
-		B6EA5AF025C996A200EFC5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EA5AEE25C996A200EFC5BA /* Main.storyboard */; };
 		B6EA5AF225C996A300EFC5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EA5AF125C996A300EFC5BA /* Assets.xcassets */; };
 		B6EA5AF525C996A300EFC5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EA5AF325C996A300EFC5BA /* LaunchScreen.storyboard */; };
 		B6EA5B0025C996A300EFC5BA /* AsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EA5AFF25C996A300EFC5BA /* AsterTests.swift */; };
@@ -39,7 +38,6 @@
 		B6EA5AE825C996A200EFC5BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6EA5AEA25C996A200EFC5BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B6EA5AEC25C996A200EFC5BA /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
-		B6EA5AEF25C996A200EFC5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6EA5AF125C996A300EFC5BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6EA5AF425C996A300EFC5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6EA5AF625C996A300EFC5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +97,13 @@
 		B6EA5AE725C996A200EFC5BA /* Aster */ = {
 			isa = PBXGroup;
 			children = (
-				B6EA5AE825C996A200EFC5BA /* AppDelegate.swift */,
-				B6EA5AEA25C996A200EFC5BA /* SceneDelegate.swift */,
-				B6EA5AEC25C996A200EFC5BA /* ProductsViewController.swift */,
-				B6EA5AEE25C996A200EFC5BA /* Main.storyboard */,
-				B6EA5AF125C996A300EFC5BA /* Assets.xcassets */,
-				B6EA5AF325C996A300EFC5BA /* LaunchScreen.storyboard */,
-				B6EA5AF625C996A300EFC5BA /* Info.plist */,
+				B6EA5B2425C9997800EFC5BA /* App */,
+				B6EA5B2325C9996100EFC5BA /* Models */,
+				B6EA5B2225C9994F00EFC5BA /* View Models */,
+				B6EA5B2125C9994700EFC5BA /* Views */,
+				B6EA5B2025C9993E00EFC5BA /* Services */,
+				B6EA5B1F25C9993000EFC5BA /* Files */,
+				B6EA5B1E25C9992700EFC5BA /* Extensions */,
 			);
 			path = Aster;
 			sourceTree = "<group>";
@@ -126,6 +124,61 @@
 				B6EA5B0C25C996A300EFC5BA /* Info.plist */,
 			);
 			path = AsterUITests;
+			sourceTree = "<group>";
+		};
+		B6EA5B1E25C9992700EFC5BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6EA5B1F25C9993000EFC5BA /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6EA5AF125C996A300EFC5BA /* Assets.xcassets */,
+				B6EA5AF325C996A300EFC5BA /* LaunchScreen.storyboard */,
+				B6EA5AF625C996A300EFC5BA /* Info.plist */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		B6EA5B2025C9993E00EFC5BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6EA5B2125C9994700EFC5BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6EA5AEC25C996A200EFC5BA /* ProductsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6EA5B2225C9994F00EFC5BA /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B6EA5B2325C9996100EFC5BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6EA5B2425C9997800EFC5BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B6EA5AE825C996A200EFC5BA /* AppDelegate.swift */,
+				B6EA5AEA25C996A200EFC5BA /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +286,6 @@
 			files = (
 				B6EA5AF525C996A300EFC5BA /* LaunchScreen.storyboard in Resources */,
 				B6EA5AF225C996A300EFC5BA /* Assets.xcassets in Resources */,
-				B6EA5AF025C996A200EFC5BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +348,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6EA5AEE25C996A200EFC5BA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6EA5AEF25C996A200EFC5BA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6EA5AF325C996A300EFC5BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = Aster/Info.plist;
+				INFOPLIST_FILE = Aster/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = Aster/Info.plist;
+				INFOPLIST_FILE = Aster/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
